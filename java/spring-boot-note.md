@@ -70,6 +70,8 @@ public class GlobalProperties {
 ### spring-boot starter
 可以认为starter是一种服务——使得使用某个功能的开发者不需要关注各种依赖库的处理，不需要具体的配置信息，由Spring Boot自动通过classpath路径下的类发现需要的Bean，并织入bean。举个例子，spring-boot-starter-jdbc这个starter的存在，使得我们只需要在`BookPubApplication`下用`@Autowired`引入`DataSource`的bean就可以，Spring Boot会自动创建`DataSource`的实例.
 
+### spring-boot Actuator端点
+http://www.cnblogs.com/sprinkle/p/7064880.html
 
 ### 其他
 @Autowired和@Inject基本是一样的，因为两者都是使用AutowiredAnnotationBeanPostProcessor来处理依赖注入。但是@Resource是个例外，它使用的是CommonAnnotationBeanPostProcessor来处理依赖注入。当然，两者都是BeanPostProcessor。
