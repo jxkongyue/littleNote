@@ -82,9 +82,9 @@ Spring Boot是一个命令行工具，用于使用Spring进行快速原型搭建
 GVM（Groovy环境管理器）可以用来管理多种不同版本的Groovy和Java二进制包。
 http://www.cnblogs.com/smile361/p/4710595.html
 Grape依赖管理器:内嵌在Groovy里的Jar包依赖管理器。Grape让你可以快速添加maven仓库依赖到你的classpath里，使脚本运行更加简单。
-`/health` 监控检查
-`/beans` 该端点用来获取应用上下文中创建的所有Bean
-`logger`调整日志级别
+- `/health` 监控检查
+- `/beans` 该端点用来获取应用上下文中创建的所有Bean
+- `/loggers`调整日志级别
 ### 其他
 @Autowired和@Inject基本是一样的，因为两者都是使用AutowiredAnnotationBeanPostProcessor来处理依赖注入。但是@Resource是个例外，它使用的是CommonAnnotationBeanPostProcessor来处理依赖注入。当然，两者都是BeanPostProcessor。
 
