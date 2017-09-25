@@ -71,8 +71,20 @@ public class GlobalProperties {
 可以认为starter是一种服务——使得使用某个功能的开发者不需要关注各种依赖库的处理，不需要具体的配置信息，由Spring Boot自动通过classpath路径下的类发现需要的Bean，并织入bean。举个例子，spring-boot-starter-jdbc这个starter的存在，使得我们只需要在`BookPubApplication`下用`@Autowired`引入`DataSource`的bean就可以，Spring Boot会自动创建`DataSource`的实例.
 
 ### spring-boot Actuator端点
-http://www.cnblogs.com/sprinkle/p/7064880.html
+http://blog.didispace.com/spring-boot-actuator-1/
+原生端点：
+应用配置类：获取应用程序中加载的应用配置、环境变量、自动化配置报告等与Spring Boot应用密切相关的配置类信息。
+度量指标类：获取应用程序运行过程中用于监控的度量指标，比如：内存信息、线程池信息、HTTP请求统计等。
+操作控制类：提供了对应用的关闭等操作类功能。
 
+### spring-boot cli
+Spring Boot是一个命令行工具，用于使用Spring进行快速原型搭建。它允许你运行Groovy脚本。
+GVM（Groovy环境管理器）可以用来管理多种不同版本的Groovy和Java二进制包。
+http://www.cnblogs.com/smile361/p/4710595.html
+Grape依赖管理器:内嵌在Groovy里的Jar包依赖管理器。Grape让你可以快速添加maven仓库依赖到你的classpath里，使脚本运行更加简单。
+`/health` 监控检查
+`/beans` 该端点用来获取应用上下文中创建的所有Bean
+`logger`调整日志级别
 ### 其他
 @Autowired和@Inject基本是一样的，因为两者都是使用AutowiredAnnotationBeanPostProcessor来处理依赖注入。但是@Resource是个例外，它使用的是CommonAnnotationBeanPostProcessor来处理依赖注入。当然，两者都是BeanPostProcessor。
 
