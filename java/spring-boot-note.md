@@ -85,6 +85,13 @@ Grape依赖管理器:内嵌在Groovy里的Jar包依赖管理器。Grape让你可
 - `/health` 监控检查
 - `/beans` 该端点用来获取应用上下文中创建的所有Bean
 - `/loggers`调整日志级别
+
+### Spring Session
+http://blog.didispace.com/spring-session-xjf-1/
+session 鉴权和 token鉴权区别
+https://auth0.com/blog/cookies-vs-tokens-definitive-guide/
+https://cdn.auth0.com/blog/cookies-vs-tokens/cookie-token-auth.png
+
 ### 其他
 @Autowired和@Inject基本是一样的，因为两者都是使用AutowiredAnnotationBeanPostProcessor来处理依赖注入。但是@Resource是个例外，它使用的是CommonAnnotationBeanPostProcessor来处理依赖注入。当然，两者都是BeanPostProcessor。
 
